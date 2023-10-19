@@ -1,0 +1,275 @@
+1. Print odd numbers in an array
+
+Anonymous Function:
+function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (Number(arr[i]) % 2) {
+      console.log(arr[i]);
+    }
+  }
+}
+
+IIFE:
+(function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (Number(arr[i]) % 2) {
+      console.log(arr[i]);
+    }
+  }
+})([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 97]);
+
+---------------------------------------------------------------------
+2. Convert all the strings to title caps in a string array
+
+Anonymous Function:
+function (strVal) {
+  console.log(
+    strVal
+      .toLowerCase()
+      .split(" ")
+      .map((a) => a[0].toUpperCase().concat(a.slice(1, a.length)))
+      .join(" ")
+  );
+}
+
+IIFE:
+(function (strVal) {
+  console.log(
+    strVal
+      .toLowerCase()
+      .split(" ")
+      .map((a) => a[0].toUpperCase().concat(a.slice(1, a.length)))
+      .join(" ")
+  );
+})("javascript FSD day3 assignment");
+--------------------------------------------------------
+3. Sum of all numbers in an array
+
+Anonymous Function:
+function (arr) {
+  console.log(arr.reduce((sum, ele) => sum + ele, 0));
+}
+
+IIFE:
+(function (arr) {
+  console.log(arr.reduce((sum, ele) => sum + ele, 0));
+})([1, 23, -32, 0]);
+---------------------------------------------------------
+4. Return all the prime numbers in an array
+
+Anonymous Function:
+function (arr) {
+  const res = arr.filter((num) => {
+    let i = 2;
+    if (num === 1) {
+      return false;
+    }
+    while (num % i) {
+      i++;
+    }
+    if (i == num) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  console.log(res);
+}
+
+IIFE:
+(function (arr) {
+  const res = arr.filter((num) => {
+    let i = 2;
+    if (num === 1) {
+      return false;
+    }
+    while (num % i) {
+      i++;
+    }
+    if (i == num) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  console.log(res);
+  return res;
+})([1, 2, 3, 4, 5, 6, 7, 8]);
+---------------------------------------------------------
+5. Return all the palindromes in an array
+Anonymous Function:
+function (arr) {
+  const res = arr.filter(
+    (str) =>
+      str.toLowerCase() ===
+      str
+        .split("")
+        .reduce((acc, cur) => {
+          acc = cur.concat(acc);
+          return acc;
+        }, "")
+        .toLowerCase()
+  );
+
+  console.log(res);
+};
+
+
+IIFE:
+(function (arr) {
+  const res = arr.filter(
+    (str) =>
+      str.toLowerCase() ===
+      str
+        .split("")
+        .reduce((acc, cur) => {
+          acc = cur.concat(acc);
+          return acc;
+        }, "")
+        .toLowerCase()
+  );
+
+  console.log(res);
+})(["civic", "a", "palindrome", "Leon sees Noel", "level"]);
+
+---------------------------------------------------------------------
+6. Return median of two sorted arrays of the same size.
+
+Anonymous Function:
+function findMedian(arr1, arr2) {
+  let sortedArr = arr1.concat(arr2).sort((a, b) => a - b);
+  console.log(
+    (sortedArr[sortedArr.length / 2] + sortedArr[sortedArr.length / 2 - 1]) / 2
+  );
+}
+
+IIFE:
+(function findMedian(arr1, arr2) {
+  let sortedArr = arr1.concat(arr2).sort((a, b) => a - b);
+  console.log(
+    (sortedArr[sortedArr.length / 2] + sortedArr[sortedArr.length / 2 - 1]) / 2
+  );
+})([1, 2, 4], [3, 5, 6]);
+
+------------------------------------------------------------------------
+7. Remove duplicates from an array
+
+Anonymous Function:
+function removeDuplicates(arr) {
+  let res = arr.reduce((res, ele) => {
+    if (res[ele]) {
+      res[ele]++;
+    } else {
+      res[ele] = 1;
+    }
+    return res;
+  }, {});
+  console.log(Object.keys(res));
+}
+
+IIFE:
+(function removeDuplicates(arr) {
+  let res = arr.reduce((res, ele) => {
+    if (res[ele]) {
+      res[ele]++;
+    } else {
+      res[ele] = 1;
+    }
+    return res;
+  }, {});
+  console.log(Object.keys(res));
+})([123, 12, 1234, 12, 12345, 123]);
+-------------------------------------------------------------------------
+8. Rotate an array by k times
+
+Anonymous Function:
+function rotateArray(arr, k) {
+  for (let i = 0; i < k; i++) {
+    arr = [...arr.pop(), ...arr];
+  }
+  console.log(arr);
+}
+
+IIFE:
+(function rotateArray(arr, k) {
+  for (let i = 0; i < k; i++) {
+    arr = [...arr.pop(), ...arr];
+  }
+  console.log(arr);
+})(["1", "2", "3", "4", "5"], 2);
+
+========================================================================
+Section2 - Arrow Functions
+========================================================================
+1. Print odd numbers in an array
+
+const arr = [1, 2, 3, 4, 5];
+let oddArr = arr.filter((num) => num % 2);
+console.log(oddArr);
+-----------------------------------------------------------------------
+2. Convert all the strings to title caps in a string array
+
+let res = (strVal) => {
+  return strVal
+    .toLowerCase()
+    .split(" ")
+    .map((a) => a[0].toUpperCase().concat(a.slice(1, a.length)))
+    .join(" ");
+};
+
+console.log(res("javascript FSD day3 assignment"));
+
+-------------------------------------------------------------------------
+3. Sum of all numbers in an array
+
+const total = (array) => {
+  let sum = 0;
+  for (let i of array) {
+    sum = sum + i;
+  }
+  return sum;
+};
+console.log(total([1, 2, 3, 4, 5]));
+------------------------------------------------------------------------
+4. Return all the prime numbers in an array
+
+let primeArr = (arr) => {
+  const res = arr.filter((num) => {
+    let i = 2;
+    if (num === 1) {
+      return false;
+    }
+    while (num % i) {
+      i++;
+    }
+    if (i == num) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return res;
+};
+console.log(primeArr([1, 2, 3, 4, 5]));
+------------------------------------------------------------------------
+5. Return all the palindromes in an array
+
+const palindromeArr = (arr) => {
+  const res = arr.filter(
+    (str) =>
+      str.toLowerCase() ===
+      str
+        .split("")
+        .reduce((acc, cur) => {
+          acc = cur.concat(acc);
+          return acc;
+        }, "")
+        .toLowerCase()
+  );
+
+  return res;
+};
+console.log(
+  palindromeArr(["civic", "a", "palindrome", "Leon sees Noel", "level"])
+);
+
