@@ -1,0 +1,76 @@
+1. JSON iteration - All For loops
+
+const players = [
+    { id: "P001", name: "Rohit", role: "Bat" },
+    { id: "P002", name: "Shubman", role: "Bat" },
+    { id: "P003", name: "Virat", role: "Bat" },
+    { id: "P004", name: "Shreyas", role: "Bat" },
+    { id: "P005", name: "Rahul", role: "Bat" },
+    { id: "P006", name: "Hardik", role: "All" },
+    { id: "P007", name: "Jadeja", role: "All" },
+    { id: "P008", name: "Kuldeep", role: "Bowl" },
+    { id: "P009", name: "Shami", role: "Bowl" },
+    { id: "P010", name: "Siraj", role: "Bowl" },
+    { id: "P011", name: "Jasprit", role: "Bowl" },
+];
+
+function usingFor(arr, role) {
+    const res = [];
+    for (let i = 0; i < arr.length; i++)
+        if (arr[i]["role"] === role) 
+            res.push(arr[i]["name"]);
+    return res;
+}
+
+function usingForOf(arr, role) {
+    const res = [];
+    for (let player of arr) 
+        if (player["role"] === role) 
+            res.push(player["name"]);
+    return res;
+}
+
+function usingForEach(arr, role) {
+    const res = [];
+    arr.forEach((player) => {
+        if (player["role"] === role) 
+            res.push(player["name"]);
+    });
+    return res;
+}
+
+function usingForIn(arr, playerName) {
+    for (let order in arr) {
+        if (arr[order]["name"] === playerName) 
+            return Number(order) + 1;
+    }
+}
+
+//Return players name who can do given role
+console.log(usingFor(players, "Bat"));
+console.log(usingForOf(players, "All"));
+console.log(usingForEach(players, "Bowl"));
+
+//Batting order of player
+console.log(usingForIn(players, "Virat"));
+
+-------------------------------------------------------------------
+2. Resume in JSON Format
+
+{
+  "personalDetails": {
+    "FirstName": "Bhupathi",
+    "LastName": "K M S"
+  },
+  "contactInfo": {
+    "mobileNo": 9876543210,
+    "email": "myemail.gmail.com"
+  },
+  "workExperience": "7 years",
+  "educationalBackground": "BE",
+  "skills": [
+    { "title": "HTML", "rating": "3" },
+    { "title": "CSS", "rating": "2" },
+    { "title": "JS", "rating": "4" }
+  ]
+}
