@@ -16,12 +16,22 @@ class Circle {
     return this._radius;
   }
   set radius(newRadius) {
-    this._radius = newRadius;
+    if (this.radius) {
+      throw new Error(
+        "radius value is already set for this circle and cannot be modified"
+      );
+    }
+    this._radius = Number(newRadius);
   }
   get color() {
     return this._color;
   }
   set color(newcolor) {
+    if (this.color) {
+      throw new Error(
+        "color is already set for this circle and cannot be modified"
+      );
+    }
     this._color = newcolor;
   }
   getArea() {
@@ -32,5 +42,7 @@ class Circle {
   }
 }
 
-let circle1 = new Circle(10, "blue");
+let circle1 = new Circle("10", "blue");
+//circle1.color = "orange"
+//circle1.radius = 20;
 console.log(circle1.getArea());
