@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: pink;
+  background-color: rebeccapurple;
+}
+
+.event-search {
+  padding: 15px;
+  text-align: center;
+  text-decoration: solid;
+  text-transform: uppercase;
+  width: 50vw;
+  border: 5px solid coral;
+  border-radius: 10px;
+  margin: 1% 25% 2% 25%;
+  background-color: chocolate;
+}
+
+.events-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin: 1% 5% 1% 5%;
+  background-color: pink;
+  background-color: rebeccapurple;
+  width: 100vw;
+}
+
+.event-card {
+  height: 280px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 5px coral solid;
+  padding: 10px;
+  background-color: burlywood;
+}
+.event-info {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 3px;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 10px;
+  border: 2px solid coral;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  background-color: chocolate;
+}
+
+h3 {
+  align-self: center;
+  padding: 20px;
+  background-color: chocolate;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid coral;
+}
+
+img {
+  height: 155px;
+  width: 155px;
+  border-radius: 77.5px;
+  border: 3px solid coral;
+}
+
+.sold-out {
+  color: grey;
+  background-color: whitesmoke;
+  border: 2px solid grey;
+}
+
+.available {
+  background-color: powderblue;
+  border: 2px solid aquamarine;
+}

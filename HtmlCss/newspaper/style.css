@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+.magazine-title {
+  text-align: center;
+  text-transform: uppercase;
+  text-justify: distribute;
+  width: 100%;
+}
+
+.news-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px 60px;
+}
+
+.headline-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.side-headlines {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.page-number {
+  writing-mode: vertical-rl;
+  height: 250px;
+  text-align: center;
+  background-color: #6085c4;
+}
+
+.page-content {
+  width: 80%;
+  height: 1525px;
+  /* border: 2px solid black; */
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.top-half {
+  height: 760px;
+  /* border: 1px solid black; */
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* padding: 5px; */
+}
+
+.top-left {
+  height: 740px;
+  width: 48.5%;
+  margin: 5px;
+  /* border: 2px solid black; */
+  padding: 5px;
+  background-color: wheat;
+}
+
+.top-right {
+  height: 760px;
+  width: 48.5%;
+  margin: 5px;
+  /* border: 2px solid black; */
+  padding: 5px;
+}
+
+.bottom-half {
+  height: 760px;
+  /* border: 1px solid black; */
+  margin: 5px;
+  padding: 5px;
+}
+
+h3 {
+  text-align: center;
+}
