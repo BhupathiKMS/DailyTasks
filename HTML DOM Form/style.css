@@ -1,0 +1,40 @@
+/* *{
+    border: 2px solid black;
+} */
+.container-left {
+  width: 49%;
+  float: left;
+  height: 80vh;
+  border: 3px solid purple;
+  border-radius: 15px;
+  margin: 0% 0.25%;
+  background-color: pink;
+}
+
+.container-right {
+  width: 49%;
+  float: right;
+  height: 80vh;
+  border: 3px solid purple;
+  border-radius: 15px;
+  margin: 0% 0.25%;
+  background-color: pink;
+}
+
+div {
+  padding: 2px;
+  border: 2px;
+}
+
+body{
+    background-color: coral;
+}
+
+tr{
+  border: 2px crimson solid;
+}
+td,th{
+  width: 11%;
+  border: 2px crimson solid;
+  text-align: center;
+}
