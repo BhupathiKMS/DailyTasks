@@ -1,0 +1,41 @@
+let count = 10;
+document.getElementById('display').innerHTML=count;
+setTimeout(()=>{
+    count--;
+    document.getElementById('display').innerHTML=count;
+    setTimeout(()=>{
+        count--;
+        document.getElementById('display').innerHTML=count;
+        setTimeout(()=>{
+            count--;
+            document.getElementById('display').innerHTML=count;
+            setTimeout(()=>{
+                count--;
+                document.getElementById('display').innerHTML=count;
+                setTimeout(()=>{
+                    count--;
+                    document.getElementById('display').innerHTML=count;
+                    setTimeout(()=>{
+                        count--;
+                        document.getElementById('display').innerHTML=count;
+                        setTimeout(()=>{
+                            count--;
+                            document.getElementById('display').innerHTML=count;
+                            setTimeout(()=>{
+                                count--;
+                                document.getElementById('display').innerHTML=count;
+                                setTimeout(()=>{
+                                    count--;
+                                    document.getElementById('display').innerHTML=count;
+                                    setTimeout(()=>{
+                                        document.getElementById('display').innerHTML="Happy Independence Day";
+                                    },800);
+                                },800);
+                            },800);
+                        },800);
+                    },800);
+                },800);
+            },800);
+        },800);
+    },800);
+},800);
