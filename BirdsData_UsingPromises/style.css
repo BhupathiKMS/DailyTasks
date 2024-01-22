@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  }
+
+body {
+  background: #eb5757; 
+  background: -webkit-linear-gradient(
+    to top,
+    #000000,
+    #eb5757
+  ); 
+  background: linear-gradient(
+    to top,
+    #000000,
+    #eb5757
+  ); 
+}
+iframe{
+    background-color: black;
+    height: 8rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 2px solid whitesmoke;
+    
+}
+
+.container{
+    background: #eb5757; 
+    background: -webkit-linear-gradient(
+      to top,
+      #000000,
+      #eb5757
+    ); 
+    background: linear-gradient(
+      to top,
+      #000000,
+      #eb5757
+    );
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 5px;
+    justify-content: center;
+    
+}
+

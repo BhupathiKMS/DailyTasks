@@ -1,0 +1,27 @@
+#isroStory {
+  width: 49.25vw;
+}
+
+@media screen and (max-width: 768px) {
+  #isroStory {
+    width: 98vw;
+  }
+}
+
+.table {
+  margin: 0 auto;
+  /* margin-left: auto;
+    margin-right: auto; */
+  max-width: fit-content;
+}
+
+td,
+thead {
+  text-align: center;
+  min-width: 20vw;
+}
+
+/* th {
+  background-color: #5c5b5b;
+  color: white;
+} */
