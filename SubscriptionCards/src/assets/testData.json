@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Free",
+    "charge": 0,
+    "maxUser": "Single User",
+    "_50GbStorage": true,
+    "unlimitedPublicProjects": true,
+    "communityAccess": true,
+    "unlimitedPrivateProjects": false,
+    "dedicatedPhoneSupport": false,
+    "freeSubdomain": false,
+    "monthlyStatusReports": false
+  },
+  {
+    "title": "Plus",
+    "charge": 9,
+    "maxUser": "5 Users",
+    "_50GbStorage": true,
+    "unlimitedPublicProjects": true,
+    "communityAccess": true,
+    "unlimitedPrivateProjects": true,
+    "dedicatedPhoneSupport": true,
+    "freeSubdomain": true,
+    "monthlyStatusReports": false
+  },
+  {
+    "title": "Pro",
+    "charge": 49,
+    "maxUser": "Unlimited Users",
+    "_50GbStorage": true,
+    "unlimitedPublicProjects": true,
+    "communityAccess": true,
+    "unlimitedPrivateProjects": true,
+    "dedicatedPhoneSupport": true,
+    "freeSubdomain": true,
+    "monthlyStatusReports": true
+  }
+]
