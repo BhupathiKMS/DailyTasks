@@ -1,0 +1,17 @@
+{
+    "name": "node_d1",
+    "version": "1.0.0",
+    "description": "",
+    "main": "nodejs-filesystem.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node nodejs-filesystem.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.19.2"
+    }
+  }
+  
